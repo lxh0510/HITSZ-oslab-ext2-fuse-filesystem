@@ -1,0 +1,1 @@
+/usr/bin/gcc  -D_FILE_OFFSET_BITS=64 -no-pie -g -Wall --pedantic -g -rdynamic CMakeFiles/lxhfs.dir/src/lxhfs.c.o CMakeFiles/lxhfs.dir/src/lxhfs_util.c.o -o lxhfs  -lfuse /home/students/200111304/lib/libddriver.a 

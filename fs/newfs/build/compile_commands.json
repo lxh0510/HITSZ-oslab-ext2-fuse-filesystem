@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/students/200111304/user-land-filesystem/fs/newfs/build",
+  "command": "/usr/bin/gcc  -I/home/students/200111304/user-land-filesystem/fs/newfs/./include  -D_FILE_OFFSET_BITS=64 -no-pie -g -Wall --pedantic -g -o CMakeFiles/lxhfs.dir/src/lxhfs.c.o -c /home/students/200111304/user-land-filesystem/fs/newfs/src/lxhfs.c",
+  "file": "/home/students/200111304/user-land-filesystem/fs/newfs/src/lxhfs.c"
+},
+{
+  "directory": "/home/students/200111304/user-land-filesystem/fs/newfs/build",
+  "command": "/usr/bin/gcc  -I/home/students/200111304/user-land-filesystem/fs/newfs/./include  -D_FILE_OFFSET_BITS=64 -no-pie -g -Wall --pedantic -g -o CMakeFiles/lxhfs.dir/src/lxhfs_util.c.o -c /home/students/200111304/user-land-filesystem/fs/newfs/src/lxhfs_util.c",
+  "file": "/home/students/200111304/user-land-filesystem/fs/newfs/src/lxhfs_util.c"
+}
+]
