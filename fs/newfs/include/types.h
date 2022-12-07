@@ -80,7 +80,7 @@ struct lxhfs_super {
     /* TODO: Define yourself */
     int                driver_fd;
 
-    int                sz_io;                   /*inode的大小*/
+    int                sz_io;                   /*驱动IO的大小*/
     int                sz_disk;                 /*磁盘大小*/
     int                sz_blk;                  /*EXT2文件系统一个块大小*/
     int                sz_usage;
@@ -105,7 +105,7 @@ struct lxhfs_super {
 
 struct lxhfs_inode {
     /* TODO: Define yourself */
-    uint32_t                ino;                           /* 在inode位图中的下标 */
+    uint32_t           ino;                           /* 在inode位图中的下标 */
     int                size;                          /* 文件已占用空间 */
     int                dir_cnt;                       /* 如果是目录类型文件，下面有几个目录项 */
     LXHFS_FILE_TYPE    ftype;                         /* 文件类型 */
@@ -119,10 +119,10 @@ struct lxhfs_dentry {
     /* TODO: Define yourself */
     char    fname[LXHFS_MAX_FILE_NAME];
     LXHFS_FILE_TYPE    ftype;                         /* 文件类型 */
-    struct lxhfs_dentry* parent;                        /* 父亲Inode的dentry */
-    struct lxhfs_dentry* brother;                       /* 兄弟 */
-    uint32_t     ino;                                      /* 指向的ino号 */
-    struct lxhfs_inode*  inode;                         /* 指向inode */
+    struct lxhfs_dentry* parent;                      /* 父亲Inode的dentry */
+    struct lxhfs_dentry* brother;                     /* 兄弟 */
+    uint32_t     ino;                                 /* 指向的ino号 */
+    struct lxhfs_inode*  inode;                       /* 指向inode */
     int     valid;                                    /* 该目录项是否有效 */  
 };
 
@@ -150,16 +150,16 @@ struct lxhfs_super_d {
     int                map_inode_blks;          /*inode位图所占的数据块*/
     int                map_inode_offset;        /*inode位图的偏移*/
 
-    int                map_data_blks;          /*数据位图所占的数据块*/
-    int                map_data_offset;        /*数据位图的偏移*/
+    int                map_data_blks;           /*数据位图所占的数据块*/
+    int                map_data_offset;         /*数据位图的偏移*/
 
-    int                inode_offset;            /*inode块的偏移*/
-    int                data_offset;             /*数据块的偏移*/
+    int                inode_offset;            /*inode块区的偏移*/
+    int                data_offset;             /*数据块区的偏移*/
 };
 
 struct lxhfs_inode_d {
     /* TODO: Define yourself */
-    uint32_t                ino;                           /* 在inode位图中的下标 */
+    uint32_t           ino;                           /* 在inode位图中的下标 */
     int                size;                          /* 文件已占用空间 */
     int                dir_cnt;                       /* 如果是目录类型文件，下面有几个目录项 */
     LXHFS_FILE_TYPE    ftype;                         /* 文件类型 */
@@ -170,7 +170,7 @@ struct lxhfs_dentry_d {
     /* TODO: Define yourself */
     char    fname[LXHFS_MAX_FILE_NAME];
     LXHFS_FILE_TYPE    ftype;                         /* 文件类型 */
-    uint32_t     ino;                                      /* 指向的ino号 */
+    uint32_t     ino;                                 /* 指向的ino号 */
     int     valid;                                    /* 该目录项是否有效 */  
 };
 #endif /* _TYPES_H_ */

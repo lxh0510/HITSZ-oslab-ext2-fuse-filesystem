@@ -165,7 +165,6 @@ int lxhfs_getattr(const char* path, struct stat * lxhfs_stat) {
  */
 int lxhfs_readdir(const char * path, void * buf, fuse_fill_dir_t filler, off_t offset,
 			    		 struct fuse_file_info * fi) {
-    /* TODO: 解析路径，获取目录的Inode，并读取目录项，利用filler填充到buf，可参考/fs/simplefs/lxhfs.c的lxhfs_readdir()函数实现 */
     boolean	is_find, is_root;
 	int		cur_dir = offset;
 
